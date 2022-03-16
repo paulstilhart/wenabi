@@ -5,6 +5,9 @@ https://www.figma.com/file/MYRNn1omUGaYNOS22IBIzc/Web-App-0.1?node-id=482%3A1699
 https://www.figma.com/file/UMBrzUngbB4vXeTGqvZM1T/Design-system-0.1?node-id=4265%3A23662
 
 https://mdbootstrap.com/docs/standard/getting-started/installation/
+
+https://github.com/paulstilhart/wenabi
+https://paulstilhart.github.io/wenabi/
 */
 
 /* 
@@ -13,7 +16,20 @@ chaque bloc apparait au fur et à mesure du scroll
 
 police du titre h1 à vérifier
 
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
+
+
 */
+
+
 
 /* SECTION 1  HERO */
 *,
@@ -77,10 +93,6 @@ police du titre h1 à vérifier
         margin: 48px 48px 0px 48px;
     }
 
-    .section1_text strong {
-        font-weight: 700;
-    }
-
     .section1_img {
         display: none;
     }
@@ -99,15 +111,48 @@ police du titre h1 à vérifier
 
 
 
-/* 
-$grid-breakpoints: (
-  xs: 0,
-  sm: 576px,
-  md: 768px,
-  lg: 992px,
-  xl: 1200px,
-  xxl: 1400px
-);
+
+/* SECTION 2 Slider of collections, light, web  DEBUT */
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+@font-face {
+    font-family: "VCHoney-Bold";
+    src: url("./supports/Honey/web/VCHoney-Bold.woff2") format("woff2"),
+        url("./supports/Honey/web/VCHoney-Bold.woff") format("woff");
+}
 
 
-*/
+
+.section2 {
+    margin: 72px 120px 72px 120px;
+}
+
+
+
+
+@media only screen and (max-width: 992px) {
+    .section2 {
+        margin: 48px 0px 48px 48px;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .section2 {
+        margin: 48px 0px 48px 24px;
+    }    
+}
+
+
+
+
+
+
+
+
