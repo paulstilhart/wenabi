@@ -1,0 +1,205 @@
+/*  SECTION 9  Redirection  DEBUT */
+
+/* 
+Reset CSS pour être sur qu'on part d'une base margin et padding nul
+peut-etre à retirer sur vous en avez un plus global
+*/
+
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* POLICE DEBUT */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+/* POLICE FIN */
+
+.section10 {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    background: linear-gradient(0deg, rgba(0, 125, 255, 0.08), rgba(0, 125, 255, 0.08)), #ffffff;
+    padding: 72px 48px 76px 48px;
+}
+
+.section10 h2 {
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 38.4px;
+    text-align: center;
+    color: #262626;
+    margin-bottom: 48px;
+}
+
+.section10_card {
+    width: 792px;
+    margin: auto;
+}
+.section10_card_text {
+    background: #ffffff;
+    box-shadow: 0px 0px 0px 1px #e0e0e0;
+    border-radius: 8px;
+    padding: 16px;
+}
+.section10_card_text_profile img {
+    width: 60px;
+    height: 60px;
+}
+.section10_card_text_profile {
+    display: flex;
+}
+.section10_card_text_profile_content {
+    margin-left: 10px;
+}
+.section10_card_text_profile_content p {
+    font-size: 14px;
+    line-height: 22.4px;
+    margin: 0;
+}
+.section10_card_text_profile_content_name {
+    font-weight: 600;
+    color: #262626;
+}
+.section10_card_text_profile_content_company {
+    font-weight: 400;
+    color: #262626;
+}
+.section10_card_text_profile_content_date {
+    font-weight: 400;
+    color: #757575;
+}
+
+.section10_card_text_content {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22.4px;
+    color: #4f4f4f;
+    margin: 16px 0px 16px 0px;
+}
+.section10_card_text_img {
+    height: 570px;
+    border-radius: 24px;
+}
+.section10_card_text_img img {
+    width: 760px;
+    height: 570px;
+}
+.section10_card_text_button {
+    margin-top: 16px;
+    display: flex;
+}
+.section10_card_text_button_like,
+.section10_card_text_button_comment {
+    width: 50%;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25.6px;
+    color: #262626;
+    border: none;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.section10_card_text_button_like img,
+.section10_card_text_button_comment img{
+    margin-right: 10px;
+    width: 20px;
+    height: 18px;
+}
+
+
+.section10_card_link {
+    margin-top: 28px;
+}
+.section10_card_link a {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 25.6px;
+    color: #262626;
+}
+.section10_card_link img{
+    width: 12px;
+    height: 12px;
+    margin-left: 11px;
+}
+
+.section10_card_link a:hover img{
+    margin-left: 20px;
+    transition-duration: 0.5s;
+}
+
+
+@media only screen and (max-width: 992px) {
+    .section10 {
+        padding: 48px 48px 52px 48px;
+    }
+    .section10_card {
+        width: 100%;
+    }
+    .section10_card_text_img {
+        height: 179.84px;
+    }
+    .section10_card_text_img img {
+        width: 240px;
+        height: 179.84px;
+    }
+}
+@media only screen and (max-width: 576px) {
+    .section10 {
+        padding: 48px 24px 52px 24px;
+    }
+}
+
+.section9_text {
+    padding: 48px 255px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.section9_text h2 {
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 38.4px;
+    text-align: center;
+    color: #ffffff;
+    margin: 0;
+}
+.section9_text p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25.6px;
+    text-align: center;
+    color: #ffffff;
+    margin: 24px 0px;
+}
+.section9_text button {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 25.6px;
+    color: #000000;
+    background: #fbfbfb;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.06);
+    border-radius: 48px;
+    padding: 16px 32px;
+    border: none;
+    text-align: center;
+}
+
+@media only screen and (max-width: 992px) {
+    .section9 {
+        margin: 0px;
+        border-radius: 0;
+    }
+    .section9_text {
+        padding: 48px;
+    }
+}
+@media only screen and (max-width: 576px) {
+    .section9_text {
+        padding: 48px 24px;
+    }
+}

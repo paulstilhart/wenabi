@@ -1,0 +1,215 @@
+/*  SECTION 7  Volunteering programme  DEBUT */
+
+/* 
+Reset CSS pour être sur qu'on part d'une base margin et padding nul
+peut-etre à retirer sur vous en avez un plus global
+*/
+
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* POLICE DEBUT */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+@font-face {
+    font-family: "VCHoney-Bold";
+    src: url("./supports/fonts/Honey/web/VCHoney-Bold.woff2") format("woff2"),
+        url("./supports/fonts/Honey/web/VCHoney-Bold.woff") format("woff");
+}
+.section7_cards h3 {
+    font-family: "VCHoney-Bold", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+}
+.section7_cards p,
+.section7_cards_sources,
+.section7_text p {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+}
+.section7_text h2,
+.section7_text a {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+}
+/* POLICE FIN */
+
+.section7 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 94px 117px 72px 123px;
+}
+
+.section7_cards {
+    display: flex;
+    flex-direction: row;
+    margin: 0px 48px 0px 0px;
+}
+.section7_cards p,
+.section7_cards h3 {
+    margin: 0;
+}
+.section7_cards_1,
+.section7_cards_2,
+.section7_cards_3,
+.section7_cards_4 {
+    width: 255px;
+    height: 255px;
+    border-radius: 24px;
+}
+.section7_cards_2,
+.section7_cards_3,
+.section7_cards_4 {
+    padding: 72.5px 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.section7_cards h3 {
+    font-size: 48px;
+    line-height: 57.6px;
+}
+.section7_cards p {
+    font-size: 16px;
+    line-height: 25.6px;
+}
+.section7_cards_2 h3,
+.section7_cards_3 h3,
+.section7_cards_2 p,
+.section7_cards_3 p {
+    text-align: center;
+    color: #ffffff;
+}
+.section7_cards_4 h3,
+.section7_cards_4 p {
+    text-align: center;
+    color: #262626;
+}
+
+.section7_cards_1 {
+    margin: 72px 24px 24px 0px;
+}
+.section7_cards_1 img {
+    width: 255px;
+    height: 255px;
+}
+.section7_cards_2 {
+    background: rgba(0, 125, 255, 0.6);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.06);
+    border-radius: 24px;
+    margin: 0px 24px 0px 0px;
+}
+.section7_cards_3 {
+    background: #007dff;
+    margin: 0;
+}
+.section7_cards_4 {
+    background: linear-gradient(0deg, rgba(0, 125, 255, 0.08), rgba(0, 125, 255, 0.08)), #ffffff;
+    margin: 24px 0px 24px 0px;
+}
+.section7_cards_sources {
+    font-size: 14px;
+    line-height: 22.4px;
+    color: #757575;
+}
+
+.section7_text {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+.section7_text h2 {
+    font-size: 32px;
+    line-height: 38.4px;
+    letter-spacing: 0px;
+    text-align: left;
+    color: #262626;
+    margin:0;
+}
+.section7_text p {
+    font-size: 16px;
+    line-height: 26px;
+    text-align: left;
+    color: #4f4f4f;
+    margin: 24px 0px 28px 0px;
+}
+.section7_text a {
+    font-size: 16px;
+    line-height: 25.6px;
+    color: #007dff;
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 992px) {
+    .section7 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 72px 48px 76px 48px;
+    }
+    .section7_text {
+        margin: 48px 0px 0px 0px;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .section7 {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        align-items: center;
+        padding: 48px 24px 48px 24px;
+    }
+    .section7_text {
+        margin: 0px;
+    }
+    .section7_cards_1,
+    .section7_cards_2,
+    .section7_cards_3,
+    .section7_cards_4 {
+        width: 130.37px;
+        height: 130.37px;
+    }
+    .section7_cards_1 img {
+        width: 130.37px;
+        height: 130.37px;
+    }
+    .section7_cards {
+        margin: 52px 0px 0px 0px;
+    }
+    .section7_cards_2,
+    .section7_cards_3,
+    .section7_cards_4 {
+        padding: 37.68px 12.27px;
+    }
+    .section7_cards h3 {
+        font-size: 24.54px;
+        line-height: 29.45px;
+    }
+    .section7_cards p {
+        font-size: 8.18px;
+        line-height: 13.09px;
+    }
+    .section7_cards_1 {
+        margin: 36.81px 12px 12.27px 0px;
+    }
+    .section7_cards_2 {
+        margin: 0px 12px 0px 0px;
+    }
+    .section7_cards_4 {
+        margin: 12.27px 0px 12.27px 0px;
+    }
+    .section7_cards_sources {
+        font-size: 7.16px;
+        line-height: 11.45px;
+    }
+}
