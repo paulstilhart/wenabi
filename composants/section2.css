@@ -1,0 +1,61 @@
+/* SECTION 2 Slider of collections, light, web  DEBUT */
+
+/* 
+Reset CSS pour être sur qu'on part d'une base margin et padding nul
+peut-etre à retirer sur vous en avez un plus global
+*/
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+.section2 {
+    padding: 72px 120px 72px 120px;
+}
+
+.section2 h2 {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 38.4px;
+    color: #262626;
+    margin-bottom: 24px;
+}
+
+.section2_buttons button {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 25.6px;
+    color: #007dff;
+    background: linear-gradient(0deg, rgba(0, 125, 255, 0.08), rgba(0, 125, 255, 0.08)), #ffffff;
+    border-radius: 24px;
+    border: none;
+    margin: 0px 24px 24px 0px;
+    padding: 10px 20px;
+}
+.section2_buttons button:hover {
+    background: linear-gradient(0deg, rgba(0, 123, 255, 0.3), rgba(0, 125, 255, 0.3)), #ffffff;
+    box-shadow: 0rem 0rem 10px rgba(0, 123, 255, 0.3);
+}
+.section2_buttons i {
+    margin-right: 13px;
+}
+
+@media only screen and (max-width: 992px) {
+    .section2 {
+        padding: 48px 48px 48px 48px;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .section2 {
+        padding: 48px 24px 48px 24px;
+    }
+}

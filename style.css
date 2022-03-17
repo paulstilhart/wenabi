@@ -16,6 +16,12 @@ chaque bloc apparait au fur et à mesure du scroll
 
 police du titre h1 à vérifier
 
+h5 passés en h3 pour bien respecter l'arborescence
+
+⚡️micro interaction attendue
+au survol du cta, on ajoute la meme ombre portée
+que sur les cartes
+
 
 $grid-breakpoints: (
   xs: 0,
@@ -25,33 +31,36 @@ $grid-breakpoints: (
   xl: 1200px,
   xxl: 1400px
 );
-
-
 */
 
+/*  SECTION 1  HERO  */
 
+/* 
+Reset CSS pour être sur qu'on part d'une base margin et padding nul
+peut-etre à retirer sur vous en avez un plus global
+*/
 
-/* SECTION 1  HERO */
 *,
 ::before,
 ::after {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
 @font-face {
     font-family: "VCHoney-Bold";
-    src: url("./supports/Honey/web/VCHoney-Bold.woff2") format("woff2"),
-        url("./supports/Honey/web/VCHoney-Bold.woff") format("woff");
+    src: url("./supports/fonts/Honey/web/VCHoney-Bold.woff2") format("woff2"),
+        url("./supports/fonts/Honey/web/VCHoney-Bold.woff") format("woff");
 }
 
 .section1 {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-    margin: 72px 120px 0px 120px;
+    padding: 72px 120px 0px 120px;
 }
 
 .section1_text h1 {
@@ -63,8 +72,8 @@ $grid-breakpoints: (
     letter-spacing: 0px;
     text-align: left;
     margin-bottom: 24px;
+    color: #262626;
 }
-
 .section1_text p {
     font-family: "Poppins", sans-serif;
     font-size: 16px;
@@ -72,8 +81,8 @@ $grid-breakpoints: (
     font-style: normal;
     line-height: 26px;
     text-align: left;
+    color: #4f4f4f;
 }
-
 .section1_text strong {
     font-weight: 700;
 }
@@ -82,7 +91,6 @@ $grid-breakpoints: (
     display: block;
     margin-left: 88px;
 }
-
 .section1_img img {
     width: 400px;
     height: 400px;
@@ -90,7 +98,7 @@ $grid-breakpoints: (
 
 @media only screen and (max-width: 992px) {
     .section1 {
-        margin: 48px 48px 0px 48px;
+        padding: 48px 48px 0px 48px;
     }
 
     .section1_img {
@@ -100,59 +108,245 @@ $grid-breakpoints: (
 
 @media only screen and (max-width: 576px) {
     .section1 {
-        margin: 48px 24px 0px 24px;
-    }
-
-    .section1_img {
-        display: none;
+        padding: 48px 24px 0px 24px;
     }
 }
 
-
-
-
-
 /* SECTION 2 Slider of collections, light, web  DEBUT */
+
+/* 
+Reset CSS pour être sur qu'on part d'une base margin et padding nul
+peut-etre à retirer sur vous en avez un plus global
+*/
 *,
 ::before,
 ::after {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
-
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
-
-@font-face {
-    font-family: "VCHoney-Bold";
-    src: url("./supports/Honey/web/VCHoney-Bold.woff2") format("woff2"),
-        url("./supports/Honey/web/VCHoney-Bold.woff") format("woff");
-}
-
-
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
 
 .section2 {
-    margin: 72px 120px 72px 120px;
+    padding: 72px 120px 72px 120px;
 }
 
+.section2 h2 {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 38.4px;
+    color: #262626;
+    margin-bottom: 24px;
+}
 
-
+.section2_buttons button {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 25.6px;
+    color: #007dff;
+    background: linear-gradient(0deg, rgba(0, 125, 255, 0.08), rgba(0, 125, 255, 0.08)), #ffffff;
+    border-radius: 24px;
+    border: none;
+    margin: 0px 24px 24px 0px;
+    padding: 10px 20px;
+}
+.section2_buttons i{
+    margin-right: 13px;
+}
 
 @media only screen and (max-width: 992px) {
     .section2 {
-        margin: 48px 0px 48px 48px;
+        padding: 48px 48px 48px 48px;
     }
 }
 
 @media only screen and (max-width: 576px) {
     .section2 {
-        margin: 48px 0px 48px 24px;
-    }    
+        padding: 48px 24px 48px 24px;
+    }
 }
 
+/*  SECTION 3  Collection, text only, media, desktop, description  DEBUT  */
+
+/* 
+Reset CSS pour être sur qu'on part d'une base margin et padding nul
+peut-etre à retirer sur vous en avez un plus global
+*/
+
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+.section3 {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    background-color: #e2bc7914;
+    padding: 72px 120px 72px 120px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.section3_text {
+    display: flex;
+    flex-direction: column;
+}
+.section3_text h2 {
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 38.4px;
+    color: #262626;
+    margin: 24px 0px 24px 0px;
+}
+.section_text_badge {
+    color: #e2bc79;
+    background-color: #ffffff;
+    border-radius: 24px;
+}
+.section_text_badge i {
+    margin-left: 17px;
+    font-size: 20px;
+}
+.section_text_badge h3 {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    margin: 0px 16px 0px 0px;
+}
+.section3_text p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25.6px;
+    color: #4f4f4f;
+    margin: 0;
+}
+.section3_text_link{
+    margin: 4px 0px 24px 0px;
+}
+.section3_text a {
+    text-decoration: underline;
+}
+.section3_text button {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 25.6px;
+    background-color: #e2bc79;
+    color: #ffffff;
+    width: 200px;
+    height: 58px;
+    border-radius: 45px;
+    border: none;
+}
+
+.section3_img {
+    margin-left: 48px;
+}
+.section3_img img {
+    width: 661.47px;
+    height: 495px;
+}
+
+@media only screen and (max-width: 1200px) {
+    .section3_img {
+        display: none;
+    }
+}
+@media only screen and (max-width: 992px) {
+    .section3 {
+        padding: 48px 48px 48px 48px;
+    }
+}
+@media only screen and (max-width: 576px) {
+    .section3 {
+        padding: 48px 24px 64px 24px;
+    }
+}
+
+/*
 
 
 
+SECTION 4  Collection, text only, card  DEBUT 
+*/
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
 
+.section4 {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    padding: 72px 120px;
+    background: linear-gradient(0deg, rgba(0, 125, 255, 0.08), rgba(0, 125, 255, 0.08)), #ffffff;
+    display: flex;
+    flex-direction: column;
+}
 
+.section4_text {
+    display: flex;
+    flex-direction: column;
+}
+.section4_text h2 {
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 38.4px;
+    color: #262626;
+    margin: 24px 0px 24px 0px;
+}
+.section4_text span {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #e2bc79;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 8px 16px;
+    border-radius: 45px;
+}
+.section4_text p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25.6px;
+    color: #4f4f4f;
+}
+.section4_text a {
+    margin: 4px 0px 24px 0px;
+}
+.section4_text button {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 25.6px;
+    background-color: #e2bc79;
+    color: #ffffff;
+    width: 200px;
+    height: 58px;
+    border-radius: 45px;
+}
 
+@media only screen and (max-width: 992px) {
+    .section4 {
+        padding: 48px;
+    }
+}
 
+@media only screen and (max-width: 576px) {
+    .section4 {
+        padding: 48px 24px;
+    }
+}
