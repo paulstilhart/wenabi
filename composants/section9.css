@@ -1,10 +1,5 @@
 /*  SECTION 9  Redirection  DEBUT */
 
-/* 
-Reset CSS pour être sur qu'on part d'une base margin et padding nul
-peut-etre à retirer sur vous en avez un plus global
-*/
-
 *,
 ::before,
 ::after {
@@ -20,19 +15,22 @@ peut-etre à retirer sur vous en avez un plus global
     font-style: normal;
 }
 /* POLICE FIN */
-
-.section9 {
+.section9{
+    max-width: 1200px;
+    margin:auto;
+}
+.section9_card {
     margin: 72px 117px 72px 123px;
     background: #007dff;
     border-radius: 24px;
 }
-.section9_text {
+.section9_card_text {
     padding: 48px 255px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.section9_text h2 {
+.section9_card_text h2 {
     font-weight: 600;
     font-size: 32px;
     line-height: 38.4px;
@@ -40,7 +38,7 @@ peut-etre à retirer sur vous en avez un plus global
     color: #ffffff;
     margin: 0;
 }
-.section9_text p {
+.section9_card_text p {
     font-weight: 400;
     font-size: 16px;
     line-height: 25.6px;
@@ -48,7 +46,7 @@ peut-etre à retirer sur vous en avez un plus global
     color: #ffffff;
     margin: 24px 0px;
 }
-.section9_text button {
+.section9_card_text button {
     font-weight: 600;
     font-size: 16px;
     line-height: 25.6px;
@@ -62,16 +60,16 @@ peut-etre à retirer sur vous en avez un plus global
 }
 
 @media only screen and (max-width: 992px) {
-    .section9 {
+    .section9_card {
         margin: 0px;
         border-radius: 0;
     }
-    .section9_text {
+    .section9_card_text {
         padding: 48px;
     }
 }
 @media only screen and (max-width: 576px) {
-    .section9_text {
+    .section9_card_text {
         padding: 48px 24px;
     }
 }

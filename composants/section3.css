@@ -1,10 +1,5 @@
 /*  SECTION 3  Collection, text only, media, desktop, description  DEBUT  */
 
-/* 
-Reset CSS pour être sur qu'on part d'une base margin et padding nul
-peut-etre à retirer sur vous en avez un plus global
-*/
-
 *,
 ::before,
 ::after {
@@ -14,21 +9,24 @@ peut-etre à retirer sur vous en avez un plus global
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
-
-.section3 {
+.section3{
+    background-color: #e2bc7914;
+}
+.section3_in {
     font-family: "Poppins", sans-serif;
     font-style: normal;
-    background-color: #e2bc7914;
     padding: 72px 120px 72px 120px;
+    max-width: 1200px;
+    margin:auto;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
-.section3_text {
+.section3_in_text {
     display: flex;
     flex-direction: column;
 }
-.section_text_badge {
+.section3_in_text_badge {
     display: inline-block;
     font-weight: 600;
     font-size: 20px;
@@ -38,17 +36,17 @@ peut-etre à retirer sur vous en avez un plus global
     margin: 0;
     padding: 8px 16px 8px 16px;
 }
-.section_text_badge i {
+.section3_in_text_badge i {
     margin-right: 9px;
 }
-.section3_text h2 {
+.section3_in_text h2 {
     font-weight: 600;
     font-size: 32px;
     line-height: 38.4px;
     color: #262626;
     margin: 24px 0px 24px 0px;
 }
-.section3_text p {
+.section3_in_text p {
     font-weight: 400;
     font-size: 16px;
     line-height: 25.6px;
@@ -58,13 +56,13 @@ peut-etre à retirer sur vous en avez un plus global
     overflow:hidden;
     text-overflow: ellipsis;
 }
-.section3_text_link {
+.section3_in_text_link {
     margin: 4px 0px 24px 0px;
 }
-.section3_text a {
+.section3_in_text a {
     text-decoration: underline;
 }
-.section3_text button {
+.section3_in_text button {
     font-weight: 600;
     font-size: 16px;
     line-height: 25.6px;
@@ -75,33 +73,36 @@ peut-etre à retirer sur vous en avez un plus global
     border-radius: 45px;
     border: none;
 }
+.section3_in_text button:hover{
+    box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.1);
+}
 
 .section3_img {
     margin-left: 48px;
 }
-.section3_img img {
+.section3_in_img img {
     width: 661.47px;
     height: 495px;
 }
 
 @media only screen and (max-width: 1200px) {
-    .section3_img {
+    .section3_in_img {
         display: none;
     }
 }
 @media only screen and (max-width: 992px) {
-    .section3 {
+    .section3_in {
         padding: 48px 48px 48px 48px;
     }
-    .section3_text p {
+    .section3_in_text p {
         max-height: 78px;
     }
 }
 @media only screen and (max-width: 576px) {
-    .section3 {
+    .section3_in {
         padding: 48px 24px 64px 24px;
     }
-    .section3_text p {
+    .section3_in_text p {
         max-height: 200px;
     }
 }

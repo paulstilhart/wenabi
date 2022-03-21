@@ -1,0 +1,132 @@
+/*  SECTION 9  Redirection  DEBUT */
+
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* POLICE DEBUT */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+.section5 {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    padding: 74px 0px 72px 123px;
+    overflow: hidden;
+    max-width: 1200px;
+    margin:auto;
+}
+.section5 h2 {
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 38.4px;
+    color: #262626;
+}
+.section5 h3 {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 28.8px;
+    color: #ffffff;
+    padding: 16px 16px 32px 16px;
+    margin: 0;
+    text-overflow: ellipsis;
+}
+/* POLICE FIN */
+
+.section5_header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0px 117px 26px 0px;
+}
+.section5_header_button {
+    display: flex;
+    align-items: flex-start;
+}
+.section5_header_button_left {
+    background-color: #ffffff;
+    border: solid rgba(79, 79, 79, 0.26) 1.5px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin:0px 16px;
+}
+.section5_header_button_right{
+    background-color: #ffffff;
+    border: solid  #007DFF 2px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin:0;
+}
+.section5_header_button_left img {
+    width: 16px;
+    height: 16px;
+}
+
+.section5_card {
+    display: flex;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+}
+.section5_card div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: none;
+    width: 282px;
+    height: 317.32px;
+    border-radius: 24px;
+    margin-right: 24px;
+}
+.section5_card div:hover {
+    box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.1);
+}
+
+.section5_card img {
+    width: 282px;
+    height: 211.32px;
+}
+.section5_slider_card_1 {
+    background-color: #e86317;
+}
+.section5_slider_card_2 {
+    background-color: #a2536c;
+}
+.section5_slider_card_3 {
+    background-color: #30ae9b;
+}
+.section5_slider_card_4 {
+    background-color: #e86317;
+}
+
+@media only screen and (max-width: 992px) {
+    .section5 {
+        padding: 48px 0px 48px 48px;
+    }
+    .section5_header {
+        margin: 0px 48px 24px 0px;
+    }
+    .section5_header_button {
+        display: none;
+    }
+    .section5_card div {
+        width: 247px;
+        height: 320.25px;
+    }
+    .section5_card img {
+        width: 247px;
+        height: 185.25px;
+    }
+}
+@media only screen and (max-width: 576px) {
+    .section5 {
+        padding: 48px 0px 48px 24px;
+    }
+    .section5_header {
+        margin: 0px 24px 24px 0px;
+    }
+}

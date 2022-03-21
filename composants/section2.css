@@ -1,9 +1,5 @@
 /* SECTION 2 Slider of collections, light, web  DEBUT */
 
-/* 
-Reset CSS pour être sur qu'on part d'une base margin et padding nul
-peut-etre à retirer sur vous en avez un plus global
-*/
 *,
 ::before,
 ::after {
@@ -15,6 +11,8 @@ peut-etre à retirer sur vous en avez un plus global
 
 .section2 {
     padding: 72px 120px 72px 120px;
+    max-width: 1200px;
+    margin:auto;
 }
 
 .section2 h2 {

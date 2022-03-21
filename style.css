@@ -8,37 +8,18 @@ https://mdbootstrap.com/docs/standard/getting-started/installation/
 
 https://github.com/paulstilhart/wenabi
 https://paulstilhart.github.io/wenabi/
-*/
-
-/* 
-⚡️micro interaction attendue
-chaque bloc apparait au fur et à mesure du scroll
-
-police du titre h1 à vérifier
-
-h5 passés en h3 pour bien respecter l'arborescence
-
-⚡️micro interaction attendue
-au survol du cta, on ajoute la meme ombre portée
-que sur les cartes
 
 
-$grid-breakpoints: (
-  xs: 0,
-  sm: 576px,
-  md: 768px,
-  lg: 992px,
-  xl: 1200px,
-  xxl: 1400px
-);
+
+https://vincentdubroeucq.com/slider-carrousel-sans-js-css-scoll-snap/
+
+section 9 button hover avec shadow
+intégré mais on voit rien
+
+
 */
 
 /*  SECTION 1  HERO  */
-
-/* 
-Reset CSS pour être sur qu'on part d'une base margin et padding nul
-peut-etre à retirer sur vous en avez un plus global
-*/
 
 *,
 ::before,
@@ -50,9 +31,9 @@ peut-etre à retirer sur vous en avez un plus global
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
 @font-face {
-    font-family: "VCHoney-Bold";
-    src: url("./supports/fonts/Honey/web/VCHoney-Bold.woff2") format("woff2"),
-        url("./supports/fonts/Honey/web/VCHoney-Bold.woff") format("woff");
+    font-family: "VCHoney-BoldBanner";
+    src: url("./supports/fonts/Honey/web/VCHoney-BoldBanner.woff2") format("woff2"),
+        url("./supports/fonts/Honey/web/VCHoney-BoldBanner.woff") format("woff");
 }
 
 .section1 {
@@ -61,10 +42,12 @@ peut-etre à retirer sur vous en avez un plus global
     justify-content: space-between;
     align-items: center;
     padding: 72px 120px 0px 120px;
+    max-width: 1200px;
+    margin: auto;
 }
 
 .section1_text h1 {
-    font-family: "VCHoney-Bold", sans-serif;
+    font-family: "VCHoney-BoldBanner", sans-serif;
     font-size: 48px;
     font-style: normal;
     font-weight: 700;
@@ -82,9 +65,26 @@ peut-etre à retirer sur vous en avez un plus global
     line-height: 26px;
     text-align: left;
     color: #4f4f4f;
+    margin-bottom: 24px;
 }
 .section1_text strong {
     font-weight: 700;
+}
+.section1_text button {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 25.6px;
+    background-color: #007dff;
+    color: #ffffff;
+    width: 246px;
+    height: 58px;
+    border-radius: 45px;
+    border: none;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+        box-shadow 0.15s ease-in-out;
+}
+.section1_text button:hover {
+    box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.1);
 }
 
 .section1_img {
@@ -114,10 +114,6 @@ peut-etre à retirer sur vous en avez un plus global
 
 /* SECTION 2 Slider of collections, light, web  DEBUT */
 
-/* 
-Reset CSS pour être sur qu'on part d'une base margin et padding nul
-peut-etre à retirer sur vous en avez un plus global
-*/
 *,
 ::before,
 ::after {
@@ -129,6 +125,8 @@ peut-etre à retirer sur vous en avez un plus global
 
 .section2 {
     padding: 72px 120px 72px 120px;
+    max-width: 1200px;
+    margin: auto;
 }
 
 .section2 h2 {
@@ -176,11 +174,6 @@ peut-etre à retirer sur vous en avez un plus global
 
 /*  SECTION 3  Collection, text only, media, desktop, description  DEBUT  */
 
-/* 
-Reset CSS pour être sur qu'on part d'une base margin et padding nul
-peut-etre à retirer sur vous en avez un plus global
-*/
-
 *,
 ::before,
 ::after {
@@ -190,21 +183,24 @@ peut-etre à retirer sur vous en avez un plus global
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
-
 .section3 {
+    background-color: #e2bc7914;
+}
+.section3_in {
     font-family: "Poppins", sans-serif;
     font-style: normal;
-    background-color: #e2bc7914;
     padding: 72px 120px 72px 120px;
+    max-width: 1200px;
+    margin: auto;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
-.section3_text {
+.section3_in_text {
     display: flex;
     flex-direction: column;
 }
-.section_text_badge {
+.section3_in_text_badge {
     display: inline-block;
     font-weight: 600;
     font-size: 20px;
@@ -214,17 +210,17 @@ peut-etre à retirer sur vous en avez un plus global
     margin: 0;
     padding: 8px 16px 8px 16px;
 }
-.section_text_badge i {
+.section3_in_text_badge i {
     margin-right: 9px;
 }
-.section3_text h2 {
+.section3_in_text h2 {
     font-weight: 600;
     font-size: 32px;
     line-height: 38.4px;
     color: #262626;
     margin: 24px 0px 24px 0px;
 }
-.section3_text p {
+.section3_in_text p {
     font-weight: 400;
     font-size: 16px;
     line-height: 25.6px;
@@ -234,13 +230,13 @@ peut-etre à retirer sur vous en avez un plus global
     overflow: hidden;
     text-overflow: ellipsis;
 }
-.section3_text_link {
+.section3_in_text_link {
     margin: 4px 0px 24px 0px;
 }
-.section3_text a {
+.section3_in_text a {
     text-decoration: underline;
 }
-.section3_text button {
+.section3_in_text button {
     font-weight: 600;
     font-size: 16px;
     line-height: 25.6px;
@@ -250,34 +246,39 @@ peut-etre à retirer sur vous en avez un plus global
     height: 58px;
     border-radius: 45px;
     border: none;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+        box-shadow 0.15s ease-in-out;
+}
+.section3_in_text button:hover {
+    box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.1);
 }
 
 .section3_img {
     margin-left: 48px;
 }
-.section3_img img {
+.section3_in_img img {
     width: 661.47px;
     height: 495px;
 }
 
 @media only screen and (max-width: 1200px) {
-    .section3_img {
+    .section3_in_img {
         display: none;
     }
 }
 @media only screen and (max-width: 992px) {
-    .section3 {
+    .section3_in {
         padding: 48px 48px 48px 48px;
     }
-    .section3_text p {
+    .section3_in_text p {
         max-height: 78px;
     }
 }
 @media only screen and (max-width: 576px) {
-    .section3 {
+    .section3_in {
         padding: 48px 24px 64px 24px;
     }
-    .section3_text p {
+    .section3_in_text p {
         max-height: 200px;
     }
 }
@@ -296,28 +297,31 @@ SECTION 4  Collection, text only, card  DEBUT
     box-sizing: border-box;
 }
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
-
 .section4 {
+    background: linear-gradient(0deg, rgba(0, 125, 255, 0.08), rgba(0, 125, 255, 0.08)), #ffffff;
+}
+.section4_in {
     font-family: "Poppins", sans-serif;
     font-style: normal;
     padding: 72px 120px;
-    background: linear-gradient(0deg, rgba(0, 125, 255, 0.08), rgba(0, 125, 255, 0.08)), #ffffff;
+    max-width: 1200px;
+    margin: auto;
     display: flex;
     flex-direction: column;
 }
 
-.section4_text {
+.section4_in_text {
     display: flex;
     flex-direction: column;
 }
-.section4_text h2 {
+.section4_in_text h2 {
     font-weight: 600;
     font-size: 32px;
     line-height: 38.4px;
     color: #262626;
     margin: 24px 0px 24px 0px;
 }
-.section4_text span {
+.section4_in_text span {
     font-weight: 600;
     font-size: 20px;
     line-height: 24px;
@@ -329,16 +333,16 @@ SECTION 4  Collection, text only, card  DEBUT
     padding: 8px 16px;
     border-radius: 45px;
 }
-.section4_text p {
+.section4_in_text p {
     font-weight: 400;
     font-size: 16px;
     line-height: 25.6px;
     color: #4f4f4f;
 }
-.section4_text a {
+.section4_in_text a {
     margin: 4px 0px 24px 0px;
 }
-.section4_text button {
+.section4_in_text button {
     font-weight: 600;
     font-size: 16px;
     line-height: 25.6px;
@@ -350,23 +354,150 @@ SECTION 4  Collection, text only, card  DEBUT
 }
 
 @media only screen and (max-width: 992px) {
-    .section4 {
+    .section4_in {
         padding: 48px;
     }
 }
 
 @media only screen and (max-width: 576px) {
-    .section4 {
+    .section4_in {
         padding: 48px 24px;
+    }
+}
+/*  SECTION 5  Slider of collections, regular, web  DEBUT */
+
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* POLICE DEBUT */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+.section5 {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    padding: 74px 0px 72px 123px;
+    overflow: hidden;
+    max-width: 1200px;
+    margin: auto;
+}
+.section5 h2 {
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 38.4px;
+    color: #262626;
+}
+.section5 h3 {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 28.8px;
+    color: #ffffff;
+    padding: 16px 16px 32px 16px;
+    margin: 0;
+    text-overflow: ellipsis;
+}
+/* POLICE FIN */
+
+.section5_header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0px 117px 26px 0px;
+}
+.section5_header_button {
+    display: flex;
+    align-items: flex-start;
+}
+.section5_header_button_left {
+    background-color: #ffffff;
+    border: solid rgba(79, 79, 79, 0.26) 1.5px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin: 0px 16px;
+}
+.section5_header_button_right {
+    background-color: #ffffff;
+    border: solid #007dff 2px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin: 0;
+}
+.section5_header_button_left img {
+    width: 16px;
+    height: 16px;
+}
+
+.section5_card {
+    display: flex;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+}
+.section5_card div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: none;
+    width: 282px;
+    height: 317.32px;
+    border-radius: 24px;
+    margin-right: 24px;
+}
+.section5_card div:hover {
+    box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.1);
+}
+
+.section5_card img {
+    width: 282px;
+    height: 211.32px;
+}
+.section5_slider_card_1 {
+    background-color: #e86317;
+}
+.section5_slider_card_2 {
+    background-color: #a2536c;
+}
+.section5_slider_card_3 {
+    background-color: #30ae9b;
+}
+.section5_slider_card_4 {
+    background-color: #e86317;
+}
+
+@media only screen and (max-width: 992px) {
+    .section5 {
+        padding: 48px 0px 48px 48px;
+    }
+    .section5_header {
+        margin: 0px 48px 24px 0px;
+    }
+    .section5_header_button {
+        display: none;
+    }
+    .section5_card div {
+        width: 247px;
+        height: 320.25px;
+    }
+    .section5_card img {
+        width: 247px;
+        height: 185.25px;
+    }
+}
+@media only screen and (max-width: 576px) {
+    .section5 {
+        padding: 48px 0px 48px 24px;
+    }
+    .section5_header {
+        margin: 0px 24px 24px 0px;
     }
 }
 
 /*  SECTION 7  Volunteering programme  DEBUT */
-
-/* 
-Reset CSS pour être sur qu'on part d'une base margin et padding nul
-peut-etre à retirer sur vous en avez un plus global
-*/
 
 *,
 ::before,
@@ -379,12 +510,12 @@ peut-etre à retirer sur vous en avez un plus global
 /* POLICE DEBUT */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
 @font-face {
-    font-family: "VCHoney-Bold";
-    src: url("./supports/fonts/Honey/web/VCHoney-Bold.woff2") format("woff2"),
-        url("./supports/fonts/Honey/web/VCHoney-Bold.woff") format("woff");
+    font-family: "VCHoney-BoldBanner";
+    src: url("./supports/fonts/Honey/web/VCHoney-BoldBanner.woff2") format("woff2"),
+        url("./supports/fonts/Honey/web/VCHoney-BoldBanner.woff") format("woff");
 }
 .section7_cards h3 {
-    font-family: "VCHoney-Bold", sans-serif;
+    font-family: "VCHoney-BoldBanner", sans-serif;
     font-style: normal;
     font-weight: 700;
 }
@@ -409,6 +540,8 @@ peut-etre à retirer sur vous en avez un plus global
     justify-content: space-between;
     align-items: center;
     padding: 94px 117px 72px 123px;
+    max-width: 1200px;
+    margin: auto;
 }
 
 .section7_cards {
@@ -502,13 +635,22 @@ peut-etre à retirer sur vous en avez un plus global
     line-height: 26px;
     text-align: left;
     color: #4f4f4f;
-    margin: 24px 0px 28px 0px;
+    margin: 24px 0px;
 }
 .section7_text a {
     font-size: 16px;
     line-height: 25.6px;
     color: #007dff;
     text-decoration: none;
+}
+.section7_card_link img {
+    width: 15px;
+    height: 14.83px;
+    margin-left: 10px;
+}
+.section7_text a:hover img {
+    margin-left: 20px;
+    transition-duration: 0.5s;
 }
 
 @media only screen and (max-width: 992px) {
@@ -521,6 +663,9 @@ peut-etre à retirer sur vous en avez un plus global
     }
     .section7_text {
         margin: 48px 0px 0px 0px;
+    }
+    .section7_cards {
+        margin: 0px 0px 0px 0px;
     }
 }
 
@@ -539,15 +684,20 @@ peut-etre à retirer sur vous en avez un plus global
     .section7_cards_2,
     .section7_cards_3,
     .section7_cards_4 {
-        width: 130.37px;
-        height: 130.37px;
+        width: 100%;
+        height: auto;
     }
     .section7_cards_1 img {
         width: 130.37px;
         height: 130.37px;
     }
     .section7_cards {
-        margin: 52px 0px 0px 0px;
+        margin: 48px 0px 0px 0px;
+        width: 100%;
+    }
+    .section7_card_1_2,
+    .section7_card_3_4 {
+        width: 50%;
     }
     .section7_cards_2,
     .section7_cards_3,
@@ -579,11 +729,6 @@ peut-etre à retirer sur vous en avez un plus global
 
 /*  SECTION 9  Redirection  DEBUT */
 
-/* 
-Reset CSS pour être sur qu'on part d'une base margin et padding nul
-peut-etre à retirer sur vous en avez un plus global
-*/
-
 *,
 ::before,
 ::after {
@@ -599,19 +744,22 @@ peut-etre à retirer sur vous en avez un plus global
     font-style: normal;
 }
 /* POLICE FIN */
-
 .section9 {
+    max-width: 1200px;
+    margin: auto;
+}
+.section9_card {
     margin: 72px 117px 72px 123px;
     background: #007dff;
     border-radius: 24px;
 }
-.section9_text {
+.section9_card_text {
     padding: 48px 255px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.section9_text h2 {
+.section9_card_text h2 {
     font-weight: 600;
     font-size: 32px;
     line-height: 38.4px;
@@ -619,7 +767,7 @@ peut-etre à retirer sur vous en avez un plus global
     color: #ffffff;
     margin: 0;
 }
-.section9_text p {
+.section9_card_text p {
     font-weight: 400;
     font-size: 16px;
     line-height: 25.6px;
@@ -627,7 +775,7 @@ peut-etre à retirer sur vous en avez un plus global
     color: #ffffff;
     margin: 24px 0px;
 }
-.section9_text button {
+.section9_card_text button {
     font-weight: 600;
     font-size: 16px;
     line-height: 25.6px;
@@ -638,28 +786,29 @@ peut-etre à retirer sur vous en avez un plus global
     padding: 16px 32px;
     border: none;
     text-align: center;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+        box-shadow 0.15s ease-in-out;
+}
+.section9_card_text button:hover {
+    box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.1);
 }
 
 @media only screen and (max-width: 992px) {
-    .section9 {
+    .section9_card {
         margin: 0px;
         border-radius: 0;
     }
-    .section9_text {
+    .section9_card_text {
         padding: 48px;
     }
 }
 @media only screen and (max-width: 576px) {
-    .section9_text {
+    .section9_card_text {
         padding: 48px 24px;
     }
 }
-/*  SECTION 9  Redirection  DEBUT */
 
-/* 
-Reset CSS pour être sur qu'on part d'une base margin et padding nul
-peut-etre à retirer sur vous en avez un plus global
-*/
+/*  SECTION 10  Newsfeed  DEBUT */
 
 *,
 ::before,
@@ -805,55 +954,5 @@ peut-etre à retirer sur vous en avez un plus global
 @media only screen and (max-width: 576px) {
     .section10 {
         padding: 48px 24px 52px 24px;
-    }
-}
-
-.section9_text {
-    padding: 48px 255px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.section9_text h2 {
-    font-weight: 600;
-    font-size: 32px;
-    line-height: 38.4px;
-    text-align: center;
-    color: #ffffff;
-    margin: 0;
-}
-.section9_text p {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 25.6px;
-    text-align: center;
-    color: #ffffff;
-    margin: 24px 0px;
-}
-.section9_text button {
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 25.6px;
-    color: #000000;
-    background: #fbfbfb;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.06);
-    border-radius: 48px;
-    padding: 16px 32px;
-    border: none;
-    text-align: center;
-}
-
-@media only screen and (max-width: 992px) {
-    .section9 {
-        margin: 0px;
-        border-radius: 0;
-    }
-    .section9_text {
-        padding: 48px;
-    }
-}
-@media only screen and (max-width: 576px) {
-    .section9_text {
-        padding: 48px 24px;
     }
 }
