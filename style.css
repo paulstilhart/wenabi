@@ -17,6 +17,14 @@ section 9 button hover avec shadow
 intégré mais on voit rien
 
 
+De ce que je vois dans mdboostratp ils utilisent un truc comme ça pour la font : font-size: calc(1.625rem + 4.5vw);
+Si ça te parait pas adapté ou trop compliqué on peut faire 3 fonts en fonction du format de l'écran
+
+Possible de le faire, mais cela est souvent lourd, car le navigateur calcule toutes les fonts.
+C'est au choix :)
+
+la barre de s
+
 */
 
 /*  SECTION 1  HERO  */
@@ -124,7 +132,7 @@ intégré mais on voit rien
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
 
 .section2 {
-    padding: 72px 120px 72px 120px;
+    padding: 72px 0px 72px 120px;
     max-width: 1200px;
     margin: auto;
 }
@@ -139,6 +147,11 @@ intégré mais on voit rien
     margin-bottom: 24px;
 }
 
+.section2_buttons {
+    display: flex;
+    overflow-x:auto;
+    flex-wrap: wrap;
+}
 .section2_buttons button {
     font-family: "Poppins", sans-serif;
     font-style: normal;
@@ -151,18 +164,26 @@ intégré mais on voit rien
     border: none;
     margin: 0px 24px 24px 0px;
     padding: 10px 20px;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+        box-shadow 0.15s ease-in-out;
+    flex: none;
 }
 .section2_buttons button:hover {
-    background: linear-gradient(0deg, rgba(0, 123, 255, 0.3), rgba(0, 125, 255, 0.3)), #ffffff;
-    box-shadow: 0rem 0rem 10px rgba(0, 123, 255, 0.3);
+    background: linear-gradient(0deg, rgba(0, 123, 255, 0.16), rgba(0, 125, 255, 0.16)), #ffffff;
+    box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.1);
 }
-.section2_buttons i {
-    margin-right: 13px;
+.section2_buttons span {
+    margin-right: 8px;
 }
 
 @media only screen and (max-width: 992px) {
     .section2 {
         padding: 48px 48px 48px 48px;
+    }
+    .section2_buttons {
+        display: flex;
+        overflow-x:auto;
+        flex-wrap: nowrap;
     }
 }
 
@@ -199,6 +220,7 @@ intégré mais on voit rien
 .section3_in_text {
     display: flex;
     flex-direction: column;
+    width: 50%;
 }
 .section3_in_text_badge {
     display: inline-block;
@@ -234,7 +256,13 @@ intégré mais on voit rien
     margin: 4px 0px 24px 0px;
 }
 .section3_in_text a {
+    color: #4f4f4f;
     text-decoration: underline;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+        box-shadow 0.15s ease-in-out;
+}
+.section3_in_text a:hover {
+    color: #757575;
 }
 .section3_in_text button {
     font-weight: 600;
@@ -253,22 +281,23 @@ intégré mais on voit rien
     box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.1);
 }
 
-.section3_img {
+.section3_in_img {
     margin-left: 48px;
+    width: 50%;
 }
 .section3_in_img img {
-    width: 661.47px;
-    height: 495px;
+    width: 100%;
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 992px) {
     .section3_in_img {
         display: none;
     }
-}
-@media only screen and (max-width: 992px) {
     .section3_in {
-        padding: 48px 48px 48px 48px;
+        padding: 48px;
+    }
+    .section3_in_text {
+        width: 100%;
     }
     .section3_in_text p {
         max-height: 78px;
@@ -276,7 +305,7 @@ intégré mais on voit rien
 }
 @media only screen and (max-width: 576px) {
     .section3_in {
-        padding: 48px 24px 64px 24px;
+        padding: 48px 24px;
     }
     .section3_in_text p {
         max-height: 200px;
@@ -284,9 +313,6 @@ intégré mais on voit rien
 }
 
 /*
-
-
-
 SECTION 4  Collection, text only, card  DEBUT 
 */
 *,
@@ -364,6 +390,7 @@ SECTION 4  Collection, text only, card  DEBUT
         padding: 48px 24px;
     }
 }
+
 /*  SECTION 5  Slider of collections, regular, web  DEBUT */
 
 *,
