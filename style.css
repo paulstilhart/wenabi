@@ -1234,7 +1234,10 @@ SECTION 4  Collection, text only, card  DEBUT
     background-repeat: no-repeat;
     background-size: 405px 321px;
     margin: auto;
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 .section8_in_img span {
@@ -1244,13 +1247,13 @@ SECTION 4  Collection, text only, card  DEBUT
     background-color: #ffffff;
     border-radius: 24px;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.06);
+    width: 439px;
     padding: 20px;
-    position: absolute;
-    bottom: 0;
-    right: -28px;
     transform: rotate(2deg);
     white-space: nowrap;
+    text-align: center;
 }
+
 .section8_in_slider {
     display: none;
 }
@@ -1265,7 +1268,7 @@ SECTION 4  Collection, text only, card  DEBUT
 .section8_in_slider_plein {
     width: 12px;
     height: 12px;
-    background: #007DFF;
+    background: #007dff;
     border-radius: 50%;
     margin: 4px;
 }
@@ -1320,9 +1323,7 @@ SECTION 4  Collection, text only, card  DEBUT
         line-height: 13.86px;
         border-radius: 13.8599px;
         padding: 12px;
-        position: absolute;
-        bottom: 0;
-        right: -28px;
+        width:253.52px
     }
     .section8_in_slider {
         display: flex;
