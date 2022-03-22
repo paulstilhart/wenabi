@@ -10,26 +10,18 @@ https://github.com/paulstilhart/wenabi
 https://paulstilhart.github.io/wenabi/
 
 
-
-https://vincentdubroeucq.com/slider-carrousel-sans-js-css-scoll-snap/
-
-section 9 button hover avec shadow
-intégré mais on voit rien
-
-
-De ce que je vois dans mdboostratp ils utilisent un truc comme ça pour la font : font-size: calc(1.625rem + 4.5vw);
-Si ça te parait pas adapté ou trop compliqué on peut faire 3 fonts en fonction du format de l'écran
-
+Après discussion en interne pour la font on va partir sur la solution CSS qui calcul en fonction de la taille de l'écran.
+font-size: calc(1.625rem + 4.5vw);
 Possible de le faire, mais cela est souvent lourd, car le navigateur calcule toutes les fonts.
-C'est au choix :)
-
-la barre de scroll disparait automatiquement sur les navigateurs pour mobile
 
 Il y a quelques sections on le responsive ne fonctionne pas sous ie11
---> il s'agit de quelles sections précisément?
 Section 3, 7, 9
-qu'est ce qui ne marche pas?
-je le testerai directement sur ie dans ce cas
+
+parallax
+https://mdbootstrap.com/docs/standard/plugins/parallax/
+
+
+https://vincentdubroeucq.com/slider-carrousel-sans-js-css-scoll-snap/
 
 */
 
@@ -56,7 +48,7 @@ je le testerai directement sur ie dans ce cas
     justify-content: space-between;
     align-items: center;
     padding: 72px 120px 0px 120px;
-    max-width: 1200px;
+    max-width: 1440px;
     margin: auto;
 }
 
@@ -85,6 +77,7 @@ je le testerai directement sur ie dans ce cas
     font-weight: 700;
 }
 .section1_text button {
+    font-family: "Poppins", sans-serif;
     font-weight: 600;
     font-size: 16px;
     line-height: 25.6px;
@@ -139,7 +132,7 @@ je le testerai directement sur ie dans ce cas
 
 .section2 {
     padding: 72px 0px 72px 120px;
-    max-width: 1200px;
+    max-width: 1440px;
     margin: auto;
 }
 
@@ -176,7 +169,6 @@ je le testerai directement sur ie dans ce cas
 }
 .section2_buttons button:hover {
     background: linear-gradient(0deg, rgba(0, 123, 255, 0.16), rgba(0, 125, 255, 0.16)), #ffffff;
-    box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.1);
 }
 .section2_buttons span {
     margin-right: 8px;
@@ -217,7 +209,7 @@ je le testerai directement sur ie dans ce cas
     font-family: "Poppins", sans-serif;
     font-style: normal;
     padding: 72px 120px 72px 120px;
-    max-width: 1200px;
+    max-width: 1440px;
     margin: auto;
     display: flex;
     flex-direction: row;
@@ -335,8 +327,9 @@ SECTION 4  Collection, text only, card  DEBUT
 .section4_in {
     font-family: "Poppins", sans-serif;
     font-style: normal;
-    padding: 72px 120px;
-    max-width: 1200px;
+    color: #262626;
+    padding: 72px 0px 72px 120px;
+    max-width: 1440px;
     margin: auto;
     display: flex;
     flex-direction: column;
@@ -345,55 +338,198 @@ SECTION 4  Collection, text only, card  DEBUT
 .section4_in_text {
     display: flex;
     flex-direction: column;
+    padding-right: 120px;
+}
+.section4_in_text_badge {
+    display: inline-block;
+    font-weight: 600;
+    font-size: 20px;
+    background-color: #ffffff;
+    color: #007dff;
+    border-radius: 24px;
+    margin: 0;
+    padding: 8px 16px 8px 16px;
+}
+.section4_in_text_badge i {
+    margin-right: 10.47px;
 }
 .section4_in_text h2 {
     font-weight: 600;
     font-size: 32px;
     line-height: 38.4px;
     color: #262626;
-    margin: 24px 0px 24px 0px;
+    margin: 24px 0px 54px 0px;
 }
-.section4_in_text span {
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 24px;
-    color: #e2bc79;
-    background-color: #ffffff;
+
+.section4_in_header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 8px 16px;
-    border-radius: 45px;
+    margin-right: 120px;
 }
-.section4_in_text p {
+.section4_in_header_text {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 25.6px;
+}
+.section4_in_header_button {
+    display: flex;
+    align-items: center;
+}
+.section4_in_header_button_see_all {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 25.6px;
+    color: #007dff;
+    background: linear-gradient(0deg, rgba(0, 125, 255, 0.08), rgba(0, 125, 255, 0.08)), #ffffff;
+    border: none;
+}
+.section4_in_header_button_left {
+    background: linear-gradient(0deg, rgba(0, 125, 255, 0.08), rgba(0, 125, 255, 0.08)), #ffffff;
+    border: solid rgba(79, 79, 79, 0.26) 1.5px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin: 0px 16px 0px 24px;
+}
+.section4_in_header_button_right {
+    background: linear-gradient(0deg, rgba(0, 125, 255, 0.08), rgba(0, 125, 255, 0.08)), #ffffff;
+    border: solid #007dff 2px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin: 0;
+}
+
+.section4_in_cards {
+    margin-top: 30px;
+    display: flex;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+}
+.section4_in_cards_card {
+    width: 282px;
+    height: 424px;
+    margin-right: 24px;
+    background-color: #ffffff;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.06);
+    border-radius: 8px;
+    overflow: hidden;
+    flex: none;
+}
+.section4_in_cards_card_img {
+    width: 282px;
+    height: 200.41px;
+    background-image: url(./supports/img/section4/section4_img_card_1.jpg);
+    position: relative;
+}
+.section4_in_cards_card span {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    background-color: white;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 19.2px;
+    letter-spacing: 0.2px;
+    padding: 8.5px 16px 8.5px 20px;
+    border-radius: 24px;
+}
+.section4_in_cards_card i {
+    margin-right: 7px;
+    line-height: normal;
+    font-size: 14px;
+}
+.section4_in_cards_card img {
+    width: 282px;
+    height: 200.41px;
+}
+.section4_in_cards_card_text {
+    margin: 16px;
+}
+.section4_in_cards_card_text h4 {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 25.6px;
+    margin: 0;
+}
+.section4_in_cards_card_text p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22.4px;
+    margin: 8px 0px 0px 0px;
+}
+.section4_in_cards_card_text p i {
+    margin-right: 7px;
+}
+.section4_in_cards_card_text p mark {
+    background-color: #ffffff;
+    padding: 0;
+    color: #757575;
+}
+.section4_in_cards_card_text h5 {
     font-weight: 400;
     font-size: 16px;
     line-height: 25.6px;
-    color: #4f4f4f;
+    margin: 24px 0px 0px 0px;
 }
-.section4_in_text a {
-    margin: 4px 0px 24px 0px;
-}
-.section4_in_text button {
+.section4_in_cards_card_see_all {
+    width: 282px;
+    height: 424px;
+    margin-right: 24px;
+    background-color: #ffffff;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.06);
+    border-radius: 8px;
+    overflow: hidden;
+    flex: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-weight: 600;
     font-size: 16px;
-    line-height: 25.6px;
-    background-color: #e2bc79;
-    color: #ffffff;
-    width: 200px;
-    height: 58px;
-    border-radius: 45px;
+    line-height: 25.26px;
+}
+.section4_in_cards_card_see_all img {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
 }
 
 @media only screen and (max-width: 992px) {
     .section4_in {
-        padding: 48px;
+        padding: 48px 0px 48px 48px;
+        max-width: 1440px;
+    }
+    .section4_in_text {
+        padding-right: 48px;
+    }
+    .section4_in_text h2 {
+        margin: 24px 0px 30px 0px;
+    }
+    .section4_in_header {
+        margin-right: 48px;
+    }
+    .section4_in_header_button_left,
+    .section4_in_header_button_right {
+        display: none;
+    }
+    .section4_in_header_button_see_all {
+        color: #ff9800;
     }
 }
 
 @media only screen and (max-width: 576px) {
     .section4_in {
-        padding: 48px 24px;
+        padding: 48px 0px 48px 24px;
+    }
+    .section4_in_text {
+        padding-right: 24px;
+    }
+    .section4_in_header {
+        margin-right: 24px;
+    }
+    .section4_in_header_button_see_all {
+        color: #007dff;
     }
 }
 
@@ -415,7 +551,7 @@ SECTION 4  Collection, text only, card  DEBUT
     font-style: normal;
     padding: 74px 0px 72px 123px;
     overflow: hidden;
-    max-width: 1200px;
+    max-width: 1440px;
     margin: auto;
 }
 .section5 h2 {
@@ -439,7 +575,7 @@ SECTION 4  Collection, text only, card  DEBUT
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 0px 117px 26px 0px;
+    margin: 0px 120px 26px 0px;
 }
 .section5_header_button {
     display: flex;
@@ -530,6 +666,219 @@ SECTION 4  Collection, text only, card  DEBUT
     }
 }
 
+/*  SECTION 6  Collection, text only, description, card  DEBUT */
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+.section6 {
+    background: linear-gradient(0deg, rgba(0, 125, 255, 0.08), rgba(0, 125, 255, 0.08)), #ffffff;
+}
+.section6_in {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    color: #262626;
+    padding: 72px 0px 72px 120px;
+    max-width: 1440px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.section6_in_text {
+    display: flex;
+    flex-direction: column;
+    padding-right: 120px;
+}
+.section6_in_text_badge {
+    display: inline-block;
+    font-weight: 600;
+    font-size: 20px;
+    background-color: #ffffff;
+    color: #007dff;
+    border-radius: 24px;
+    margin: 0;
+    padding: 8px 16px 8px 16px;
+}
+.section6_in_text_badge i {
+    margin-right: 10.47px;
+}
+.section6_in_text h2 {
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 38.4px;
+    color: #262626;
+    margin: 24px 0px;
+}
+.section6_in_text p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25.6px;
+    color: #4f4f4f;
+    margin: 0;
+    max-height: 230px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.section6_in_text_link {
+    margin: 4px 0px 24px 0px;
+}
+.section6_in_text a {
+    color: #4f4f4f;
+    text-decoration: underline;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+        box-shadow 0.15s ease-in-out;
+}
+.section6_in_text a:hover {
+    color: #757575;
+}
+
+.section6_in_header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 54px 120px 0px 0px;
+}
+.section6_in_header_text {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 25.6px;
+}
+.section6_in_header_button {
+    display: flex;
+    align-items: center;
+}
+.section6_in_header_button_see_all {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 25.6px;
+    color: #007dff;
+    background: linear-gradient(0deg, rgba(0, 125, 255, 0.08), rgba(0, 125, 255, 0.08)), #ffffff;
+    border: none;
+}
+.section6_in_header_button_left {
+    background: linear-gradient(0deg, rgba(0, 125, 255, 0.08), rgba(0, 125, 255, 0.08)), #ffffff;
+    border: solid rgba(79, 79, 79, 0.26) 1.5px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin: 0px 16px 0px 24px;
+}
+.section6_in_header_button_right {
+    background: linear-gradient(0deg, rgba(0, 125, 255, 0.08), rgba(0, 125, 255, 0.08)), #ffffff;
+    border: solid #007dff 2px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin: 0;
+}
+
+.section6_in_cards {
+    margin-top: 30px;
+    display: flex;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+}
+.section6_in_cards_card {
+    width: 282px;
+    height: 378px;
+    margin-right: 24px;
+    background-color: #ffffff;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.06);
+    border-radius: 8px;
+    overflow: hidden;
+    flex: none;
+}
+.section6_in_cards_card_img {
+    width: 282px;
+    height: 200.41px;
+    background-image: url(./supports/img/section6/section6_img_card_1.jpg);
+    position: relative;
+}
+.section6_in_cards_card span {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    background-color: white;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 19.2px;
+    letter-spacing: 0.2px;
+    padding: 4.5px 8px 4.5px 11.7px;
+    border-radius: 24px;
+}
+.section6_in_cards_card i {
+    margin-right: 7px;
+    line-height: normal;
+    font-size: 14px;
+}
+.section6_in_cards_card_text {
+    margin: 16px;
+}
+.section6_in_cards_card_text h4 {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 25.6px;
+    margin: 0;
+}
+.section6_in_cards_card_text p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22.4px;
+    margin: 8px 0px 0px 0px;
+}
+.section6_in_cards_card_text p mark {
+    background-color: #ffffff;
+    padding: 0;
+    color: #757575;
+}
+.section6_in_cards_card_text h5 {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25.6px;
+    margin: 31px 0px 7px 0px;
+}
+
+@media only screen and (max-width: 992px) {
+    .section6_in {
+        padding: 48px 0px 48px 48px;
+    }
+    .section6_in_text {
+        padding-right: 48px;
+    }
+    .section6_in_text h2 {
+        margin: 24px 0px 30px 0px;
+    }
+    .section6_in_header {
+        margin-right: 48px;
+    }
+    .section6_in_header_button_left,
+    .section6_in_header_button_right {
+        display: none;
+    }
+    .section6_in_header_button_see_all {
+        color: #ff9800;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .section6_in {
+        padding: 48px 0px 48px 24px;
+    }
+    .section6_in_text {
+        padding-right: 24px;
+    }
+    .section6_in_header {
+        margin-right: 24px;
+    }
+    .section6_in_header_button_see_all {
+        color: #007dff;
+    }
+}
 /*  SECTION 7  Volunteering programme  DEBUT */
 
 *,
@@ -573,7 +922,7 @@ SECTION 4  Collection, text only, card  DEBUT
     justify-content: space-between;
     align-items: center;
     padding: 94px 117px 72px 123px;
-    max-width: 1200px;
+    max-width: 1440px;
     margin: auto;
 }
 
@@ -625,7 +974,7 @@ SECTION 4  Collection, text only, card  DEBUT
 
 .section7_cards_1 {
     margin: 72px 24px 24px 0px;
-    background-image: url('./supports/img/section7/section7_img.png');
+    background-image: url("./supports/img/section7/section7_img.png");
     background-size: contain;
 }
 
@@ -679,10 +1028,10 @@ SECTION 4  Collection, text only, card  DEBUT
     width: 15px;
     height: 14.83px;
     margin-left: 10px;
+    transition: 0.5s;
 }
 .section7_text a:hover img {
     margin-left: 20px;
-    transition-duration: 0.5s;
 }
 
 @media only screen and (max-width: 992px) {
@@ -717,15 +1066,15 @@ SECTION 4  Collection, text only, card  DEBUT
         width: 100%;
         height: auto;
     }
-    .section7_card_1_2{
+    .section7_card_1_2 {
         width: 50%;
         height: auto;
         margin-right: 6px;
     }
-    .section7_card_3_4{
+    .section7_card_3_4 {
         width: 50%;
         height: auto;
-        margin-left:6px;
+        margin-left: 6px;
     }
     .section7_cards h3 {
         font-size: 24.54px;
@@ -765,6 +1114,224 @@ SECTION 4  Collection, text only, card  DEBUT
     }
 }
 
+/*  SECTION 8 Slider of User feedback  DEBUT */
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+.section8 {
+    background-color: #fbfbfb;
+}
+@font-face {
+    font-family: "VCHoney-Regular";
+    src: url("./supports/fonts/Honey/web/VCHoney-Regular.woff2") format("woff2"),
+        url("./supports/fonts/Honey/web/VCHoney-Regular.woff") format("woff");
+}
+.section8_in {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    color: #262626;
+    padding: 72px 120px;
+    max-width: 1440px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.section8_in_text {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+}
+.section8_in_text_quote {
+    width: 114.23px;
+    height: 79px;
+}
+.section8_in_text_citation {
+    margin: 0px 88px 0px 48px;
+}
+.section8_in_text_citation_header {
+    display: flex;
+    flex-direction: row;
+}
+.section8_in_text_citation_header img {
+    width: 64px;
+    height: 64px;
+    margin-right: 16px;
+}
+.section8_in_text_citation_header div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.section8_in_text_citation_header h2 {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 28.8px;
+    margin: 0;
+}
+.section8_in_text_citation_header p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25.6px;
+    color: #757575;
+    margin: 0;
+}
+
+.section8_in_text_citation_blockquote {
+    font-family: "VCHoney-Regular", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 50.4px;
+    color: #757575;
+    margin: 24px 0px;
+}
+
+.section8_in_text_citation_link {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 25.6px;
+    color: #007dff;
+    text-decoration: none;
+    margin-bottom: 30px;
+}
+.section8_in_text_citation_link img {
+    width: 15px;
+    height: 14.83px;
+    margin-left: 10px;
+    transition: 0.5s;
+}
+.section8_in_text_citation_link:hover img {
+    margin-left: 20px;
+}
+.section8_in_text_citation_button_left {
+    background: #fbfbfb;
+    border: solid #007dff 1.5px;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    margin: 0px 24px 0px 0px;
+}
+.section8_in_text_citation_button_right {
+    background: #fbfbfb;
+    border: solid #007dff 1.5px;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    margin: 0;
+}
+
+.section8_in_img {
+    width: 405px;
+    height: 321px;
+    flex: none;
+    background-image: url(./supports/img/section8/section8_img.png);
+    background-repeat: no-repeat;
+    background-size: 405px 321px;
+    margin: auto;
+    position: relative;
+}
+
+.section8_in_img span {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    background-color: #ffffff;
+    border-radius: 24px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.06);
+    padding: 20px;
+    position: absolute;
+    bottom: 0;
+    right: -28px;
+    transform: rotate(2deg);
+    white-space: nowrap;
+}
+.section8_in_slider {
+    display: none;
+}
+.section8_in_slider_creux {
+    width: 8px;
+    height: 8px;
+    background: rgba(0, 125, 255, 0.5);
+    opacity: 0.4;
+    border-radius: 50%;
+    margin: 4px;
+}
+.section8_in_slider_plein {
+    width: 12px;
+    height: 12px;
+    background: #007DFF;
+    border-radius: 50%;
+    margin: 4px;
+}
+
+@media only screen and (max-width: 1200px) {
+    .section8_in {
+        flex-direction: column;
+    }
+    .section8_in_text {
+        margin: 0px 0px 45px 0px;
+    }
+    .section8_in_text_citation {
+        margin: 0px 0px 0px 48px;
+    }
+}
+@media only screen and (max-width: 992px) {
+    .section8_in {
+        padding: 72px 48px 91.72px 48px;
+    }
+    .section8_in_text_citation {
+        margin: 0px 0px 0px 48px;
+    }
+}
+@media only screen and (max-width: 576px) {
+    .section8_in {
+        padding: 48px 24px 50px 24px;
+    }
+    .section8_in_text_quote {
+        display: none;
+    }
+    .section8_in_text_citation {
+        margin: 0;
+    }
+    .section8_in_text_citation_blockquote {
+        font-size: 23.96px;
+        line-height: 33.54px;
+        margin: 24px 0px;
+    }
+    .section8_in_text_citation_link {
+        margin-bottom: 0;
+    }
+    .section8_in_text_citation_button {
+        display: none;
+    }
+    .section8_in_img {
+        width: 201.86px;
+        height: 151.4px;
+        background-size: 201.86px 151.4px;
+    }
+    .section8_in_img span {
+        font-size: 11.5499px;
+        line-height: 13.86px;
+        border-radius: 13.8599px;
+        padding: 12px;
+        position: absolute;
+        bottom: 0;
+        right: -28px;
+    }
+    .section8_in_slider {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 61.39px;
+    }
+}
+
 /*  SECTION 9  Redirection  DEBUT */
 
 *,
@@ -783,7 +1350,7 @@ SECTION 4  Collection, text only, card  DEBUT
 }
 /* POLICE FIN */
 .section9 {
-    max-width: 1200px;
+    max-width: 1440px;
     margin: auto;
 }
 .section9_card {
@@ -967,11 +1534,11 @@ SECTION 4  Collection, text only, card  DEBUT
     width: 12px;
     height: 12px;
     margin-left: 11px;
+    transition: 0.5s;
 }
 
 .section10_card_link a:hover img {
     margin-left: 20px;
-    transition-duration: 0.5s;
 }
 
 @media only screen and (max-width: 992px) {
