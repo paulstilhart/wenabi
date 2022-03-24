@@ -1374,6 +1374,7 @@ SECTION 4  Collection, text only, card  DEBUT
     margin: 0;
 }
 .section9_card_text p {
+    width: 100%;
     font-weight: 400;
     font-size: 16px;
     line-height: 25.6px;
