@@ -1012,7 +1012,7 @@ SECTION 4  Collection, text only, card  DEBUT
     text-align: left;
     color: #262626;
     margin: 0;
-    width: 100%;
+    max-width: 100%;
 }
 .section7_text p {
     font-size: 16px;
@@ -1020,7 +1020,7 @@ SECTION 4  Collection, text only, card  DEBUT
     text-align: left;
     color: #4f4f4f;
     margin: 24px 0px;
-    width: 100%;
+    max-width: 100%;
 }
 .section7_text a {
     font-size: 16px;
