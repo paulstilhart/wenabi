@@ -929,7 +929,6 @@ SECTION 4  Collection, text only, card  DEBUT
     display: flex;
     flex-direction: row;
     margin: 0px 48px 0px 0px;
-    width: 100%;
 }
 .section7_cards p,
 .section7_cards h3 {
@@ -1003,7 +1002,7 @@ SECTION 4  Collection, text only, card  DEBUT
     flex-direction: column;
     justify-content: center;
     margin: 0;
-    width: 100%;
+    width: calc(100% - 582px);
 }
 .section7_text h2 {
     font-size: 32px;
@@ -1012,7 +1011,6 @@ SECTION 4  Collection, text only, card  DEBUT
     text-align: left;
     color: #262626;
     margin: 0;
-    max-width: 100%;
 }
 .section7_text p {
     font-size: 16px;
@@ -1020,7 +1018,6 @@ SECTION 4  Collection, text only, card  DEBUT
     text-align: left;
     color: #4f4f4f;
     margin: 24px 0px;
-    max-width: 100%;
 }
 .section7_text a {
     font-size: 16px;
@@ -1044,12 +1041,12 @@ SECTION 4  Collection, text only, card  DEBUT
         flex-direction: column;
         padding: 72px 48px 76px 48px;
     }
-    .section7_text {
-        margin: 48px 0px 0px 0px;
-    }
     .section7_cards {
-        margin: 0px 0px 0px 0px;
+        margin: 0px 0px 48px 0px;
         justify-content: center;
+    }
+    .section7_text {
+        width: 100%;
     }
 }
 
@@ -1059,12 +1056,8 @@ SECTION 4  Collection, text only, card  DEBUT
         flex-direction: column-reverse;
         padding: 48px 24px 48px 24px;
     }
-    .section7_text {
-        margin: 0px;
-    }
     .section7_cards {
         margin: 48px 0px 0px 0px;
-        width: 100%;
         height: auto;
     }
     .section7_card_1_2 {
