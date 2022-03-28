@@ -1003,6 +1003,7 @@ SECTION 4  Collection, text only, card  DEBUT
     justify-content: center;
     margin: 0;
     width: calc(100% - 582px);
+    overflow: hidden;
 }
 .section7_text h2 {
     font-size: 32px;
